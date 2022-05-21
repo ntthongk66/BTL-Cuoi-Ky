@@ -10,6 +10,7 @@
 - [4.các chức năng cài đặt](#CacChucNangCaiDat)
 - [5.Các kỹ thuật lập trình sử dụng](#CacKyThuatLapTrinhSuDung)
 - [6.Kết luận](#KetLuan) 
+- [7.Nguồn tham khảo](#ThamKhao)
   
 
 <a name="HuongDanCaiDat"></a>
@@ -85,3 +86,9 @@
 - học sử dụng các phần mềm chỉnh sửa ảnh như photoshop ... để hạn chế phụ thuộc nguồn trên mạng
 - sử dụng các hàm toán học và đạo hàm để làm cho quỹ đạo của máy bay và tên lửa phức tạp hơn -> tăng độ khó
 - nâng cấp particleEngine sao cho đẹp mắt hơn 
+
+<a name="ThamKhao"></a>
+## 7.Nguồn tham khảo
+- [lazyfoo](https://lazyfoo.net/tutorials/SDL/index.php)
+- [SDL2_tutorial](https://www.youtube.com/watch?v=QQzAHcojEKg&list=PLhfAbcv9cehhkG7ZQK0nfIGJC_C-wSLrx)
+- hình ảnh và âm thanh đều lấy ở trên mạng về 
