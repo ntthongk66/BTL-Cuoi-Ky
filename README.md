@@ -10,6 +10,7 @@
 - [4.các chức năng cài đặt](#CacChucNangCaiDat)
 - [5.Các kỹ thuật lập trình sử dụng](#CacKyThuatLapTrinhSuDung)
 - [6.Kết luận](#KetLuan) 
+  
 
 <a name="HuongDanCaiDat"></a>
 ## 1.Hướng dẫn cài đặt 
@@ -53,6 +54,7 @@
 - tính điểm sau mỗi lượt chơi
 - dùng tiền để nâng cấp
 - cho biết điểm cao nhất
+- FPS
 ```
 
 <a name="CacKyThuatLapTrinhSuDung"></a>
@@ -67,4 +69,18 @@
 
 <a name="KetLuan"></a>
 ## 6.Kết luận
--
+
+### Khó khăn 
+- 90% là tự code game nên gặp nhiều trở ngại trong việc phát triển 
+- đồ họa game chưa đẹp lắm vì phần lớn là tự vẽ (trên mạng có nhưng tính phí)
+- cốt truyện game vẫn đơn giản
+- chưa tối ưu được bộ nhớ ( khoảng 30mb mỗi phút)
+- gặp khó khăn trong việc fixbug những lỗi liên quan đến logic thi biên dịch game
+
+### Hướng phát triển
+- Thêm chế độ chơi : người chơi lái máy bay thả bom thành phố
+- tối ưu bộ nhớ hơn
+- tối ưu lại một số đoạn code cho ngắn hơn mà vẫn đảm bảo chức năng
+- học sử dụng các phần mềm chỉnh sửa ảnh như photoshop ... để hạn chế phụ thuộc nguồn trên mạng
+- sử dụng các hàm toán học và đạo hàm để làm cho quỹ đạo của máy bay và tên lửa phức tạp hơn -> tăng độ khó
+- nâng cấp particleEngine sao cho đẹp mắt hơn 
