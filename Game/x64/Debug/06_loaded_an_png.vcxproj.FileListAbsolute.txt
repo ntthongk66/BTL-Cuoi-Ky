@@ -1,3 +1,3 @@
 C:\dev\06_loaded_an_png\x64\Debug\06_loaded_an_png.exe
 E:\06_loaded_an_png\x64\Debug\06_loaded_an_png.exe
-C:\dev\Game\x64\Debug\06_loaded_an_png.exe
+C:\BTL-Cuoi-Ky\Game\x64\Debug\06_loaded_an_png.exe

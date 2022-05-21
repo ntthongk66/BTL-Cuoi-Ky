@@ -20,10 +20,10 @@ void close();
 
 
 //particle_effect
- LTexture gRedTexture;
- LTexture gGreenTexture;
- LTexture gBlueTexture;
- LTexture gShimmerTexture;
+LTexture gRedTexture;
+LTexture gGreenTexture;
+LTexture gBlueTexture;
+LTexture gShimmerTexture;
 
 
 //sound_effect
@@ -34,7 +34,7 @@ Mix_Chunk* upgrade_sound_effect = NULL;
 Mix_Chunk* music_while_playing_game = NULL;
 
 //bomb sound effect
-vector<Mix_Chunk*>explosion_sound_effect(6,NULL);
+vector<Mix_Chunk*>explosion_sound_effect(6, NULL);
 
 //background_music
 Mix_Music* main_waiting_music = NULL;
@@ -59,6 +59,9 @@ LTexture bullet_icon_dam;
 LTexture bullet_icon_rmp;
 LTexture rocket_icon_dam;
 LTexture rocket_icon_rmp;
+
+//for GETHELP
+LTexture enemy_info;
 
 //text on screen
 LTexture score;
@@ -89,7 +92,7 @@ int value_of_upgrade_rocket_dam = 2;
 int value_of_upgrade_rocket_rpm = -300;
 int value_of_upgrade_health = 300;
 
-int  blood ;
+int  blood;
 int your_score = 0;
 int high_score;
 int money;
@@ -132,7 +135,7 @@ SDL_Event e;
 bool init()
 {
 	bool success = true;
-	if (SDL_Init(SDL_INIT_VIDEO|SDL_INIT_AUDIO) < 0) // init SDL and SDL_mix
+	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0) // init SDL and SDL_mix
 	{
 		cout << "fail to initialize sdl, sdl_error: " << SDL_GetError() << endl;
 		success = false;
@@ -162,7 +165,7 @@ bool init()
 			{
 				SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 				// init SDL_image
-				int imgf = IMG_INIT_PNG; 
+				int imgf = IMG_INIT_PNG;
 				if (!(IMG_Init(imgf) && imgf))
 				{
 					cout << "fail to init sdl_image: " << IMG_GetError() << endl;
@@ -175,7 +178,7 @@ bool init()
 					cout << "mixer could not initialize! sdl_mixer error: " << Mix_GetError() << endl;
 				}
 				// init ttf
-				if (TTF_Init() == -1) 
+				if (TTF_Init() == -1)
 				{
 					cout << "SDL_ttf could not initialize! SDL_ttf Error: " << TTF_GetError() << endl;
 					success = false;
@@ -205,10 +208,10 @@ bool loadMedia()
 	explosion_sound_effect[3] = Mix_LoadWAV("asset/sound_effect/explosion effect 4.wav");
 	explosion_sound_effect[4] = Mix_LoadWAV("asset/sound_effect/explosion effect 5.wav");
 	explosion_sound_effect[5] = Mix_LoadWAV("asset/sound_effect/explosion effect 6.wav");
-	
+
 	//background_music
 	main_waiting_music = Mix_LoadMUS("asset/sound_effect/Lake Town Theme.mp3");
-	
+
 	//font_game
 	game_font = TTF_OpenFont("game_font.ttf", 20);
 	if (game_font == NULL)
@@ -222,7 +225,10 @@ bool loadMedia()
 	gBlueTexture.LoadTexure("asset/particle/smoke1.png", gRenderer);
 	gRedTexture.LoadTexure("asset/particle/smoke1.png", gRenderer);
 	gShimmerTexture.LoadTexure("asset/particle/smoke2.png", gRenderer);
-	
+
+	//in gethelp
+
+	enemy_info.LoadTexure("asset/enemy_info.png", gRenderer);
 
 	//Load all the texture
 	pic.LoadTexure("asset/gun_body.png", gRenderer);
@@ -282,7 +288,7 @@ void close()
 		Mix_FreeChunk(explosion_sound_effect[i]);
 		explosion_sound_effect[i] = NULL;
 	}
-	
+
 	//button
 	getBack_button.free();
 	getHelp_button.free();
@@ -292,7 +298,7 @@ void close()
 	replay_button.free();
 	main_button.free();
 	upgrade_button.free();
-	option_button.free();	
+	option_button.free();
 
 	//inside upgrade button
 	upgrade_bullet_dam_button.free();
@@ -300,6 +306,9 @@ void close()
 	upgrade_rocket_dam_button.free();
 	upgrade_rocket_rpm_button.free();
 	upgrade_health_button.free();
+
+	//in gethelp
+	enemy_info.free();
 
 	// text on screen
 	score.free();
@@ -390,7 +399,7 @@ int main(int argc, char* args[])
 			vector<rocket*>rocket_list;
 			vector<enemy_bomb*>bomb_list;
 
-			
+
 
 			SDL_ShowCursor(SDL_DISABLE);
 
@@ -402,7 +411,7 @@ int main(int argc, char* args[])
 				while (!quitMenu)
 				{
 					//update everythings in here
-					
+
 					update("city_blood.txt", blood);
 					update("bullet_dam.txt", bullet_dam);
 					update("bullet_rpm.txt", delay_shot_time);
@@ -469,8 +478,10 @@ int main(int argc, char* args[])
 							getBack_button.HandleGetBackButton(e, gRenderer, menu, play, quitMenu, howToPlay, upgrade, switch_button_sound_effect);
 							the_aim.handdleEvent(e);
 						}
-						SDL_SetRenderDrawColor(gRenderer, 100,100, 0, 100);
+						SDL_SetRenderDrawColor(gRenderer, 100, 100, 0, 100);
 						SDL_RenderClear(gRenderer);
+
+						enemy_info.render((screen_width - enemy_info.get_width()) / 2, (screen_height - enemy_info.get_height()) / 2 , gRenderer);
 						//button
 						getBack_button.setPos(100, 20, gRenderer);
 						the_aim.render(gRenderer);
@@ -485,16 +496,16 @@ int main(int argc, char* args[])
 							if (e.type == SDL_QUIT)
 							{
 								exitGame = true;
-								
+
 							}
 							//button event
-							
+
 							upgrade_bullet_dam_button.HandleUpgrade(e, gRenderer, money_to_upgrade_bullet_dam, bullet_dam, value_of_upgrade_bullet_dam, money, upgrade_sound_effect);
 							upgrade_bullet_rpm_button.HandleUpgrade(e, gRenderer, money_to_upgrade_bullet_rpm, delay_shot_time, value_of_upgrade_bullet_rpm, money, upgrade_sound_effect);
 							upgrade_rocket_dam_button.HandleUpgrade(e, gRenderer, money_to_upgrade_rocket_dam, rocket_dam, value_of_upgrade_rocket_dam, money, upgrade_sound_effect);
 							upgrade_rocket_rpm_button.HandleUpgrade(e, gRenderer, money_to_upgrade_bullet_rpm, delay_launch_time, value_of_upgrade_rocket_rpm, money, upgrade_sound_effect);
 							upgrade_health_button.HandleUpgrade(e, gRenderer, money_to_upgrade_health, blood, value_of_upgrade_health, money, upgrade_sound_effect);
-							
+
 							getBack_button.HandleGetBackButton(e, gRenderer, menu, play, quitMenu, howToPlay, upgrade, switch_button_sound_effect);
 							the_aim.handdleEvent(e);
 
@@ -503,23 +514,23 @@ int main(int argc, char* args[])
 						SDL_RenderClear(gRenderer);
 
 						upgrade_bullet_dam_button.setPos(300, 150, gRenderer);
-						content_of_upgrade_bullet_dam.loadFromRenderedText("+1 bullet damage ( " +convert_to_string(bullet_dam)+ " ) :: cost 1000$", color_black, gRenderer, game_font);
+						content_of_upgrade_bullet_dam.loadFromRenderedText("+1 bullet damage ( " + convert_to_string(bullet_dam) + " ) :: cost 1000$", color_black, gRenderer, game_font);
 						content_of_upgrade_bullet_dam.render(350, 150, gRenderer);
 
 						upgrade_bullet_rpm_button.setPos(300, 200, gRenderer);
-						content_of_upgrade_bullet_rpm.loadFromRenderedText("-50ms delay shoot time ( " +convert_to_string(delay_shot_time)+ "ms ) :: cost 1500$", color_black, gRenderer, game_font);
+						content_of_upgrade_bullet_rpm.loadFromRenderedText("-50ms delay shoot time ( " + convert_to_string(delay_shot_time) + "ms ) :: cost 1500$", color_black, gRenderer, game_font);
 						content_of_upgrade_bullet_rpm.render(350, 200, gRenderer);
 
 						upgrade_rocket_dam_button.setPos(300, 250, gRenderer);
-						content_of_upgrade_rocket_dam.loadFromRenderedText("+2 rocket damage ( " +convert_to_string(rocket_dam) + " ) :: cost 2000$", color_black, gRenderer, game_font);
+						content_of_upgrade_rocket_dam.loadFromRenderedText("+2 rocket damage ( " + convert_to_string(rocket_dam) + " ) :: cost 2000$", color_black, gRenderer, game_font);
 						content_of_upgrade_rocket_dam.render(350, 250, gRenderer);
 
 						upgrade_rocket_rpm_button.setPos(300, 300, gRenderer);
-						content_of_upgrade_rocket_rpm.loadFromRenderedText("-300ms delay launch time ( " +convert_to_string(delay_launch_time)+ "ms ):: cost 2500$", color_black, gRenderer, game_font);
+						content_of_upgrade_rocket_rpm.loadFromRenderedText("-300ms delay launch time ( " + convert_to_string(delay_launch_time) + "ms ):: cost 2500$", color_black, gRenderer, game_font);
 						content_of_upgrade_rocket_rpm.render(350, 300, gRenderer);
 
 						upgrade_health_button.setPos(300, 350, gRenderer);
-						content_of_upgrade_health.loadFromRenderedText("+300 city health ( " +convert_to_string(blood)+" ) :: cost 3000$", color_black, gRenderer, game_font);
+						content_of_upgrade_health.loadFromRenderedText("+300 city health ( " + convert_to_string(blood) + " ) :: cost 3000$", color_black, gRenderer, game_font);
 						content_of_upgrade_health.render(350, 350, gRenderer);
 
 						your_money.loadFromRenderedText("Your money: " + convert_to_string(money) + "$", color_black, gRenderer, game_font);
@@ -550,10 +561,12 @@ int main(int argc, char* args[])
 						gun.handleEvent(e);
 						the_aim.handdleEvent(e);
 
-
-						quit_game_button.HandleQuitButton(e, gRenderer, exitGame, play, switch_button_sound_effect);
-						replay_button.HandleReplayButton(e, gRenderer, menu, play, howToPlay, switch_button_sound_effect, your_score, blood, upgrade_blood,plus_money_once_time,option,enemy_list,bomb_list,wave);
-						main_button.HandleMenuButton(e, gRenderer, menu, play, quitMenu, your_score, blood,  upgrade_blood,switch_button_sound_effect,plus_money_once_time, option,enemy_list,bomb_list,wave);
+						if (is_dead || option)
+						{
+							quit_game_button.HandleQuitButton(e, gRenderer, exitGame, play, switch_button_sound_effect);
+							replay_button.HandleReplayButton(e, gRenderer, menu, play, howToPlay, switch_button_sound_effect, your_score, blood, upgrade_blood, plus_money_once_time, option, enemy_list, bomb_list, wave);
+							main_button.HandleMenuButton(e, gRenderer, menu, play, quitMenu, your_score, blood, upgrade_blood, switch_button_sound_effect, plus_money_once_time, option, enemy_list, bomb_list, wave);
+						}
 						option_button.HandleOptionButton(e, gRenderer, option, switch_button_sound_effect);
 					}
 
@@ -582,7 +595,7 @@ int main(int argc, char* args[])
 					}
 
 
-					Collision(enemy_list, gun, bullet_dam, rocket_dam, rocket_list, bomb_list,explosion_sound_effect ,gRenderer, your_score, blood, frame);
+					Collision(enemy_list, gun, bullet_dam, rocket_dam, rocket_list, bomb_list, explosion_sound_effect, gRenderer, your_score, blood, frame);
 
 					//player
 					gun.render(gRenderer);
@@ -596,10 +609,10 @@ int main(int argc, char* args[])
 						gun.makeRocket(gRenderer, delay_launch_time, rocket_sound_effect);
 						gun.handleRocket(gRenderer);
 					}
-					
+
 
 					pic.render(0, screen_height - 88, gRenderer);
-					
+
 					city_background.render(0, screen_height - city_background.get_height(), gRenderer);
 
 					//render score text
@@ -611,9 +624,9 @@ int main(int argc, char* args[])
 					city_blood.render(50, 550, gRenderer);
 
 					//button
-					option_button.setPos(screen_width - option_button.get_width()-20, screen_height - option_button.get_height()-20, gRenderer);
+					option_button.setPos(screen_width - option_button.get_width() - 20, screen_height - option_button.get_height() - 20, gRenderer);
 					the_aim.render(gRenderer);
-					if (is_dead) 
+					if (is_dead)
 					{
 						GameOver.render((screen_width - GameOver.get_width()) / 2, (screen_height - GameOver.get_height()) / 2 - space_between_button - 50, gRenderer);
 						//button
@@ -658,7 +671,7 @@ int main(int argc, char* args[])
 		update("rocket_rpm.txt", delay_launch_time);
 		update("money.txt", money);
 	}
-	
+
 
 	//Free resources and close everythings
 	close();
