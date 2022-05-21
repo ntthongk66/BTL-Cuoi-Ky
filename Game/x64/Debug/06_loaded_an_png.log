@@ -1,0 +1,38 @@
+﻿  Bullet.cpp
+C:\dev\Game\Bullet.cpp(25,33): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\dev\Game\Bullet.cpp(26,33): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  button.cpp
+  Collision.cpp
+  cursor_aim.cpp
+  enemy.cpp
+C:\dev\Game\enemy.cpp(5,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\dev\Game\enemy.cpp(204,29): warning C4018: '>': signed/unsigned mismatch
+C:\dev\Game\enemy.cpp(217,29): warning C4018: '>': signed/unsigned mismatch
+C:\dev\Game\enemy.cpp(261,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\dev\Game\enemy.cpp(280,29): warning C4018: '>': signed/unsigned mismatch
+  enemyArray.cpp
+C:\dev\Game\enemyArray.cpp(6,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\dev\Game\enemyArray.cpp(20,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\dev\Game\enemyArray.cpp(34,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\dev\Game\enemyArray.cpp(48,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\dev\Game\enemyArray.cpp(62,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\dev\Game\enemyArray.cpp(78,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\dev\Game\enemyArray.cpp(92,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\dev\Game\enemyArray.cpp(106,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\dev\Game\enemyArray.cpp(120,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\dev\Game\enemyArray.cpp(134,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\dev\Game\enemyArray.cpp(160,16): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\dev\Game\enemyArray.cpp(186,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  enemy_bomb.cpp
+  Game_Utlis.cpp
+  LTexture.cpp
+  player.cpp
+C:\dev\Game\player.cpp(116,30): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\dev\Game\player.cpp(136,45): warning C4018: '>': signed/unsigned mismatch
+C:\dev\Game\player.cpp(178,30): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  rocket.cpp
+C:\dev\Game\rocket.cpp(101,33): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\dev\Game\rocket.cpp(102,33): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Source.cpp
+  Generating Code...
+  06_loaded_an_png.vcxproj -> C:\dev\Game\x64\Debug\06_loaded_an_png.exe
