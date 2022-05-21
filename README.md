@@ -22,6 +22,7 @@
 
 <a name="MoTaChung"></a>
 ## 2.Mô tả chung
+- [video minh họa](https://youtu.be/HmcJa93vi6Q)
 - **Người chơi sử dụng chuột để điều khiển và ngắm bắn máy bay**
   - Đạn sẽ bắn từ bên trái và tên lửa sẽ bắn từ bên phải của màn hình
   - Người chơi sẽ phải bắn máy bay càng sớm càng tốt trước khi chúng kịp thả bom lên thành phố
