@@ -44,7 +44,7 @@
 
 <a name="CacChucNangCaiDat"></a>
 ## 4.các chức năng cài đặt
-```
+
 - Menu của game: PLAY, GETHELP, UPGRADE 
 - Đồ họa game
 - Âm thanh ( bomb, Bullet, rocket)
@@ -55,7 +55,7 @@
 - dùng tiền để nâng cấp
 - cho biết điểm cao nhất
 - FPS
-```
+
 
 <a name="CacKyThuatLapTrinhSuDung"></a>
 ## 5.Các kỹ thuật lập trình sử dụng
