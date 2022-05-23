@@ -14,6 +14,12 @@ const int Num_of_type_3_2 = 4;
 const int Num_of_type_4_2 = 5;
 const int Num_of_type_5_2 = 8;
 
+const int Num_of_type_1_3 = 3;
+const int Num_of_type_2_3 = 4;
+const int Num_of_type_3_3 = 5;
+const int Num_of_type_4_3 = 4;
+const int Num_of_type_5_3 = 4;
+
 
 void EnemyArray_1(vector<enemy*>& EnemyArray, SDL_Renderer* render);
 void EnemyArray_2(vector<enemy*>& EnemyArray, SDL_Renderer* render);
@@ -26,6 +32,10 @@ void EnemyArray_2_2(vector<enemy*>& EnemyArray, SDL_Renderer* render);
 void EnemyArray_3_2(vector<enemy*>& EnemyArray, SDL_Renderer* render);
 void EnemyArray_4_2(vector<enemy*>& EnemyArray, SDL_Renderer* render);
 void EnemyArray_5_2(vector<enemy*>& EnemyArray, SDL_Renderer* render);
+
+void EnemyArray_1_3(vector<enemy*>& EnemyArray, SDL_Renderer* render);
+void EnemyArray_2_3(vector<enemy*>& EnemyArray, SDL_Renderer* render);
+void EnemyArray_3_3(vector<enemy*>& EnemyArray, SDL_Renderer* render);
 
 
 

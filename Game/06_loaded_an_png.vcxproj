@@ -72,16 +72,16 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\BTL-Cuoi-Ky\SDL2_ttf-2.0.18\include;C:\BTL-Cuoi-Ky\SDL2_mixer-2.0.4\include;C:\BTL-Cuoi-Ky\SDL2_image-2.0.5\include;C:\BTL-Cuoi-Ky\SDL2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\BTL-Cuoi-Ky\SDL2_mixer-2.0.4\lib\x64;C:\BTL-Cuoi-Ky\SDL2_ttf-2.0.18\lib\x64;C:\BTL-Cuoi-Ky\SDL2\lib\x64;C:\BTL-Cuoi-Ky\SDL2_image-2.0.5\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\dev\SDL2_mixer-2.0.4\include;C:\dev\SDL2_ttf-2.0.18\include;C:\dev\SDL2\include;C:\dev\SDL2_image-2.0.5\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\dev\SDL2_mixer-2.0.4\lib\x64;C:\dev\SDL2_ttf-2.0.18\lib\x64;C:\dev\SDL2\lib\x64;C:\dev\SDL2_image-2.0.5\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\BTL-Cuoi-Ky\SDL2_ttf-2.0.18\include;C:\BTL-Cuoi-Ky\SDL2_mixer-2.0.4\include;C:\BTL-Cuoi-Ky\SDL2_image-2.0.5\include;C:\BTL-Cuoi-Ky\SDL2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\BTL-Cuoi-Ky\SDL2_mixer-2.0.4\lib\x64;C:\BTL-Cuoi-Ky\SDL2_ttf-2.0.18\lib\x64;C:\BTL-Cuoi-Ky\SDL2\lib\x64;C:\BTL-Cuoi-Ky\SDL2_image-2.0.5\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\dev\SDL2_mixer-2.0.4\include;C:\dev\SDL2_ttf-2.0.18\include;C:\dev\SDL2\include;C:\dev\SDL2_image-2.0.5\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\dev\SDL2_mixer-2.0.4\lib\x64;C:\dev\SDL2_ttf-2.0.18\lib\x64;C:\dev\SDL2\lib\x64;C:\dev\SDL2_image-2.0.5\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -92,12 +92,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\BTL-Cuoi-Ky\SDL2_mixer-2.0.4\include;C:\BTL-Cuoi-Ky\SDL2_ttf-2.0.18\include;C:\BTL-Cuoi-Ky\SDL2_image-2.0.5\include;C:\BTL-Cuoi-Ky\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\SDL2_mixer-2.0.4\include;C:\dev\SDL2_ttf-2.0.18\include;C:\dev\SDL2_image-2.0.5\include;C:\dev\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\BTL-Cuoi-Ky\SDL2_mixer-2.0.4\lib\x64;C:\BTL-Cuoi-Ky\SDL2_ttf-2.0.18\lib\x64;C:\BTL-Cuoi-Ky\SDL2_image-2.0.5\lib\x64;C:\BTL-Cuoi-Ky\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\dev\SDL2_mixer-2.0.4\lib\x64;C:\dev\SDL2_ttf-2.0.18\lib\x64;C:\dev\SDL2_image-2.0.5\lib\x64;C:\dev\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -123,12 +123,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\BTL-Cuoi-Ky\SDL2_mixer-2.0.4\include;C:\BTL-Cuoi-Ky\SDL2_ttf-2.0.18\include;C:\BTL-Cuoi-Ky\SDL2_image-2.0.5\include;C:\BTL-Cuoi-Ky\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\SDL2_mixer-2.0.4\include;C:\dev\SDL2_ttf-2.0.18\include;C:\dev\SDL2_image-2.0.5\include;C:\dev\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\BTL-Cuoi-Ky\SDL2_mixer-2.0.4\lib\x64;C:\BTL-Cuoi-Ky\SDL2_ttf-2.0.18\lib\x64;C:\BTL-Cuoi-Ky\SDL2_image-2.0.5\lib\x64;C:\BTL-Cuoi-Ky\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\dev\SDL2_mixer-2.0.4\lib\x64;C:\dev\SDL2_ttf-2.0.18\lib\x64;C:\dev\SDL2_image-2.0.5\lib\x64;C:\dev\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

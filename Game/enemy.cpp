@@ -96,36 +96,36 @@ void enemy::load_type_of_enemy(SDL_Renderer* render)
 	{
 	case 1:
 		loadTexture("asset/enemy/f53.png", render);
-		enemy_blood = 4;
+		enemy_blood = 8;
 		score = 100;
 		area_drop_bomb = 100;
 		delay_shoot_time = 800;
 		break;
 	case 2:
 		loadTexture("asset/enemy/F35.png", render);
-		enemy_blood = 8;
+		enemy_blood = 10;
 		score = 150;
 		area_drop_bomb = 200;
 		delay_shoot_time = 700;
 		break;
 	case 3:
 		loadTexture("asset/enemy/ALC_17.png", render);
-		enemy_blood = 14;
+		enemy_blood = 20;
 		score = 250;
 		area_drop_bomb = 250;
 		delay_shoot_time = 800;
 		break;
 	case 4:
 		loadTexture("asset/enemy/p54.png", render);
-		enemy_blood = 12;
+		enemy_blood = 15;
 		score = 220;
 		area_drop_bomb = 200;
 		delay_shoot_time = 700;
 		break;
 	case 5:
 		loadTexture("asset/enemy/MiG-29.png", render);
-		enemy_blood = 3;
-		score = 150;
+		enemy_blood = 4;
+		score = 140;
 		area_drop_bomb = 200;
 		delay_shoot_time = 800;
 		break;
@@ -162,7 +162,7 @@ void enemy::handleMove(const int& screen_Width, const int& screen_Height, SDL_Re
 		}
 
 
-		if (xpos > screen_Width + 200)
+		if (xpos > screen_Width + 300)
 		{
 			flip = SDL_FLIP_HORIZONTAL;
 			vel_x = -3;
@@ -172,7 +172,7 @@ void enemy::handleMove(const int& screen_Width, const int& screen_Height, SDL_Re
 			//for bomb
 			go_from_left_to_right = false;
 		}
-		else if (xpos < -200)
+		else if (xpos < -300)
 		{
 			flip = SDL_FLIP_NONE;
 			vel_x = 3;
@@ -259,8 +259,8 @@ void enemy::launchRocket(SDL_Renderer*render)
 bool enemy::able_to_make_bomb()
 {
 	srand(time(NULL));
-	int des_x_1 = 150 + rand() % 200;
-	int des_x_2 = 900 + rand() % 150;
+	int des_x_1 = 250 + rand() % 200;
+	int des_x_2 = 600 + rand() % 150;
 
 	if (go_from_left_to_right && (xpos > des_x_1 && xpos < des_x_1 + area_drop_bomb))
 	{
