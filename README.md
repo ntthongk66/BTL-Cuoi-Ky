@@ -73,6 +73,11 @@
 <a name="KetLuan"></a>
 ## 6.Kết luận
 
+### Điều tâm đắc
+- Đây là lần đầu tiên tự code game
+- sử dụng nhiều hàm phức tạp, chưa gặp bao giờ
+
+
 ### Khó khăn 
 - 90% là tự code game nên gặp nhiều trở ngại trong việc phát triển 
 - đồ họa game chưa đẹp lắm vì phần lớn là tự vẽ (trên mạng có nhưng tính phí)
