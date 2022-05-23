@@ -2,6 +2,7 @@
 - họ và tên: Nguyễn Tiến Thông
 - MSV: 21020408
 - Lớp: K66CC
+- Tên trò chơi: Bắn máy bay
 
 # **Mục Lục**
 - [1.Hướng dẫn cài đặt](#HuongDanCaiDat)
