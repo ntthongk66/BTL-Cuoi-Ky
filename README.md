@@ -19,7 +19,8 @@
 - Nên cài đặt [Visual Studio](https://visualstudio.microsoft.com/) để thuận tiện hơn trong việc thiết lập game
 - `sau khi tải file zip về thì nên cho vào ổ C:\ luôn đề tránh việc phải thiết lập lại các đường dẫn gây mất thời gian`
 - **Nếu vẫn chưa chạy được thì xem tiếp**
-- Vào phần `Game.sln` sau đó nhấp chuột phải vào `properties` và chỉ phải setup lại các đường dẫn của `SDL2, SDL_image, SDL_mix, SDL_ttf` theo [hướng dẫn](https://www.youtube.com/watch?v=QQzAHcojEKg&list=PLhfAbcv9cehhkG7ZQK0nfIGJC_C-wSLrx)
+- Tham khảo cách cài đặt tại [đây](https://lazyfoo.net/tutorials/SDL/01_hello_SDL/windows/msvc2019/index.php)
+
 
 
 <a name="MoTaChung"></a>
